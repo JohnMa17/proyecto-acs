@@ -41,7 +41,7 @@ proyecto-acs/
 
 ## Publicación
 El proyecto se encuentra publicado en GitHub Pages:
-👉 https://TU-USUARIO.github.io/proyecto-acs/
+👉 https://github.com/JohnMa17/proyecto-acs.git
 
 ## Referencia
 Pressman, R. S. (2010). *Ingeniería de software: Un enfoque práctico* (7.ª ed.). McGraw-Hill. Capítulo 22, Administración de la configuración del software.
