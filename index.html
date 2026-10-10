@@ -22,6 +22,8 @@
         <div class="container nav-content">
             <a href="#introduccion">Introducción</a>
             <a href="#capas">Capas de ACS</a>
+            <a href="#flujo-cambio">Control de Cambio</a>
+            <a href="#comparativa">ACS vs Git</a>
             <a href="#referencias">Bibliografía</a>
         </div>
     </nav>
@@ -60,7 +62,7 @@
             </div>
         </section>
 
-        <!-- SECCIÓN 2: CAPAS DEL PROCESO ACS (Capas 1 y 2 - Desarrollado por John) -->
+        <!-- SECCIÓN 2: CAPAS DEL PROCESO ACS (Capas 1 y 2 por John; Capas 3, 4 y 5 por Duran) -->
         <section id="capas" class="card">
             <h2>2. Las Capas Concéntricas del Proceso ACS</h2>
             <p>
@@ -88,7 +90,99 @@
                         </p>
                     </div>
                 </div>
-                <!-- Duran agregará aquí las capas restantes y la tabla -->
+
+                <div class="accordion-item">
+                    <button class="accordion-header">3. Control de Cambio</button>
+                    <div class="accordion-body">
+                        <p>
+                            Establece el equilibrio crítico: evitar la burocracia que paraliza el avance sin caer en la anarquía del cambio descontrolado. Regula el proceso a través de la evaluación de peticiones, la intervención de la Autoridad de Control de Cambio (ACC) y la emisión de Órdenes de Cambio de Ingeniería (OCI).
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">4. Auditoría de la Configuración</button>
+                    <div class="accordion-body">
+                        <p>
+                            Complementa las revisiones técnicas evaluando la conformidad del proceso: ¿Se implementó estrictamente lo aprobado en la OCI? ¿Se documentaron las fechas y los autores? ¿Se mantuvieron sincronizados todos los ítems vinculados?
+                        </p>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">5. Reporte del Estado de la Configuración (REC)</button>
+                    <div class="accordion-body">
+                        <p>
+                            También llamado contabilidad de estado. Es el mecanismo de comunicación que responde: <em>¿Qué cambió? ¿Quién lo autorizó y realizó? ¿Cuándo ocurrió? ¿Qué otros componentes fueron afectados?</em> Garantiza la transparencia total ante el equipo y los interesados.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 3: CONTROL DE CAMBIO DETALLADO (Desarrollado por Duran) -->
+        <section id="flujo-cambio" class="card">
+            <h2>3. Flujo Operativo del Control de Cambio</h2>
+            <div class="flowchart">
+                <div class="flow-step">1. Reconocimiento de necesidad y solicitud formal</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">2. Evaluación técnica de impacto colateral y costos</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step decision">3. Decisión de la Autoridad de Control de Cambio (ACC)</div>
+                <div class="flow-arrow">↓ (Si se aprueba)</div>
+                <div class="flow-step">4. Emisión de Orden de Cambio de Ingeniería (OCI)</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">5. Check-out del ICS & Desarrollo en entorno aislado</div>
+                <div class="flow-arrow">↓</div>
+                <div class="flow-step">6. Auditoría, pruebas de SQA e incorporación a la Línea Base</div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 4: TABLA COMPARATIVA (Desarrollado por Duran) -->
+        <section id="comparativa" class="card">
+            <h2>4. Correspondencia Práctica: Pressman vs. Ecosistema Git/GitHub</h2>
+            <div class="table-container">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Concepto Teórico (Pressman)</th>
+                            <th>Mecanismo en Git / GitHub</th>
+                            <th>Función y Aplicación en Desarrollo Real</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><strong>Ítem de Configuración (ICS)</strong></td>
+                            <td>Archivos rastreados por Git (Tracked Files)</td>
+                            <td>Código, estilos, imágenes y documentación gestionados individualmente.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Línea de Referencia (Baseline)</strong></td>
+                            <td>Rama <code>main</code> / Git Tags (ej. <code>v1.0</code>)</td>
+                            <td>Punto congelado y verificado que representa una entrega estable.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Aislamiento de Cambios</strong></td>
+                            <td>Ramas de trabajo (Feature Branches)</td>
+                            <td>Permite desarrollo no lineal y paralelo sin interferir con la versión principal.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Solicitud / OCI</strong></td>
+                            <td>Issues y Pull Requests (PR)</td>
+                            <td>Mecanismo donde se propone el cambio y se detalla su alcance.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Autoridad de Control (ACC)</strong></td>
+                            <td>Revisores de Código (Code Reviewers)</td>
+                            <td>Valoran el PR, solicitan cambios y aprueban el Merge.</td>
+                        </tr>
+                        <tr>
+                            <td><strong>Auditoría y REC</strong></td>
+                            <td><code>git log</code>, <code>git blame</code>, GitHub Actions</td>
+                            <td>Trazabilidad inmutable de autores, fechas, mensajes de commit y pruebas.</td>
+                        </tr>
+                    </tbody>
+                </table>
             </div>
         </section>
 
