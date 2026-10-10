@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Administración de la Configuración del Software (ACS) | Pressman</title>
+    <link rel="stylesheet" href="css/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&family=Fira+Code:wght@400;500&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <span class="badge">Ingeniería de Software</span>
+            <h1>Administración de la Configuración del Software (ACS)</h1>
+            <p class="subtitle">Síntesis interactiva de la Sección 22.3 (2.3) — Roger S. Pressman</p>
+        </div>
+    </header>
+
+    <nav class="nav-bar">
+        <div class="container nav-content">
+            <a href="#introduccion">Introducción</a>
+            <a href="#capas">Capas de ACS</a>
+            <a href="#referencias">Bibliografía</a>
+        </div>
+    </nav>
+
+    <main class="container">
+        <!-- SECCIÓN 1: INTRODUCCIÓN (Desarrollado por John) -->
+        <section id="introduccion" class="card">
+            <h2>1. Introducción: La Naturaleza del Cambio</h2>
+            <blockquote cite="Arnold Bennett">
+                "Cualquier cambio, incluso para mejorar, está acompañado de inconvenientes e incomodidades."
+                <footer>— Arnold Bennett</footer>
+            </blockquote>
+            <p>
+                En cualquier proyecto de software, el cambio es una certeza. Surgen modificaciones en las necesidades de negocio, correcciones en el código o ajustes en la infraestructura. Sin una disciplina formal, estos cambios provocan versiones inconsistentes, pérdidas de código y fallas de calidad.
+            </p>
+            <p>
+                La <strong>Administración de la Configuración del Software (ACS)</strong> proporciona el marco de trabajo y las herramientas necesarias para responder a cuatro objetivos esenciales:
+            </p>
+            <div class="grid-2">
+                <div class="box-item">
+                    <h4>1. Identificar</h4>
+                    <p>Reconocer todos los elementos discretos que componen la configuración del sistema.</p>
+                </div>
+                <div class="box-item">
+                    <h4>2. Gestionar</h4>
+                    <p>Administrar las peticiones, impactos y modificaciones aplicadas a los componentes.</p>
+                </div>
+                <div class="box-item">
+                    <h4>3. Facilitar</h4>
+                    <p>Permitir la construcción y ensamblaje de múltiples versiones del software de manera controlada.</p>
+                </div>
+                <div class="box-item">
+                    <h4>4. Garantizar</h4>
+                    <p>Asegurar que la calidad y estabilidad se preserven a medida que el software evoluciona.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECCIÓN 2: CAPAS DEL PROCESO ACS (Capas 1 y 2 - Desarrollado por John) -->
+        <section id="capas" class="card">
+            <h2>2. Las Capas Concéntricas del Proceso ACS</h2>
+            <p>
+                Según Pressman, los Ítems de Configuración del Software (ICS) se desplazan a través de capas concéntricas durante su ciclo de vida:
+            </p>
+
+            <div class="accordion">
+                <div class="accordion-item active">
+                    <button class="accordion-header">1. Identificación de Objetos de Configuración</button>
+                    <div class="accordion-body">
+                        <p>Los objetos que componen el software se catalogan con un nombre único y atributos definidos:</p>
+                        <ul>
+                            <li><strong>Objetos Básicos:</strong> Unidades atómicas creadas durante el ciclo de vida (ej. un módulo de código fuente, un caso de prueba, una sección de requisitos).</li>
+                            <li><strong>Objetos Agregados:</strong> Colecciones estructuradas de objetos básicos u otros agregados (ej. un documento de especificación técnica o un paquete de despliegue).</li>
+                            <li><strong>Relaciones Transestructurales:</strong> Conexiones de dependencia que permiten evaluar cómo la modificación de un objeto repercute en los demás.</li>
+                        </ul>
+                    </div>
+                </div>
+
+                <div class="accordion-item">
+                    <button class="accordion-header">2. Control de Versión</button>
+                    <div class="accordion-body">
+                        <p>
+                            Combina herramientas y procedimientos para gestionar las distintas versiones de los objetos de configuración. Integra el repositorio del proyecto, facilidades de compilación/construcción y herramientas de rastreo de diferencias (como los <em>conjuntos de cambio</em> o change sets, que describen quién, cuándo y por qué modificó cada archivo).
+                        </p>
+                    </div>
+                </div>
+                <!-- Duran agregará aquí las capas restantes y la tabla -->
+            </div>
+        </section>
+
+        <!-- SECCIÓN DE REFERENCIAS -->
+        <section id="referencias" class="card">
+            <h2>Referencias Bibliográficas</h2>
+            <div class="reference-item">
+                <p>
+                    Pressman, R. S. (2010). <em>Ingeniería del Software: Un enfoque práctico</em> (7.ª ed.). McGraw-Hill Interamericana. Parte 3: Administración de la Calidad, Capítulo 22: Administración de la Configuración del Software, Sección 22.3 ("El Proceso ACS"), pp. 508–515.
+                </p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container footer-content">
+            <p>Desarrollado de manera colaborativa para la asignatura de Ingeniería de Software.</p>
+            <p>Publicado con GitHub Pages bajo control de versiones no lineal.</p>
+        </div>
+    </footer>
+</body>
+</html>
